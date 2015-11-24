@@ -51,6 +51,10 @@ public class Vector {
 		return this.x * v2.x + this.y * v2.y;
 	}
 	
+	public Vector vectorFromPolar(double azimuth, double radius){
+		Vector v = new Vector(radius * Math.cos(azimuth * Math.PI / 180.0),(radius * Math.sin(azimuth * Math.PI / 180.0)));
+		return v;
+	}
 	@Override
 	public String toString() {
 		return "(" + this.x + ", " + this.y + ")";
